@@ -8,7 +8,11 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: [
+        'favicon.ico',
+        'apple-touch-icon.png',
+        'masked-icon.svg'
+      ],
       manifest: {
         name: 'OurSpace - Mental Health Platform',
         short_name: 'OurSpace',
@@ -39,10 +43,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
-              },
-              cacheKeyWillBeUsed: async ({ request }) => {
-                return `${request.url}?version=1`;
+                maxAgeSeconds: 60 * 60 * 24 * 365 // 365 days
               }
             }
           }
@@ -51,6 +52,6 @@ export default defineConfig({
     })
   ],
   optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+    exclude: ['lucide-react']
+  }
 });
