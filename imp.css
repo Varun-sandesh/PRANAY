@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* .aboutme{
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    display: grid;
+    place-items: left;
+} */
+.aboutus{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* .about{
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    
+} */
+
+.about:hover{
+    border:1px solid white;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #1f1f1f;
+}
+
+.about:active{
+    border: 0.5px solid white;
+    /* background-color: azure;
+    color: black; */
+    transform: scale(1.1);
+}
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #5093ff;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #333;
+    padding: 1rem 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+.service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.service-card {
+    padding: 20px 40px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+ 
+  .service-card:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+  }
+  
+  
+  .service-card:active {    
+    transform: scale(0.98);
+  }

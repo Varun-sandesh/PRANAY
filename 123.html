@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OurSpace - Your Safe Space</title>
+    <link rel="stylesheet" href="123.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to OurSpace</h1>
+            <p>Your Safe Space for Mental Health & Inner Peace</p>
+            <a href="#quiz" class="btn">Take the Quiz</a>
+        </div>
+    </header>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2>Mental Health Quiz</h2>
+            <form id="quiz-form">
+                <label for="q1">How often do you feel anxious or stressed?</label>
+                <select id="q1" name="q1">
+                    <option value="rarely">Rarely</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="often">Often</option>
+                    <option value="always">Always</option>
+                </select>
+
+                <label for="q2">How is your sleep pattern?</label>
+                <select id="q2" name="q2">
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+
+                <label for="q3">Do you feel socially connected?</label>
+                <select id="q3" name="q3">
+                    <option value="yes">Yes</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <button type="button" class="btn" onclick="analyzeQuiz()">Get Results</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="results" class="results" style="display:none;">
+        <div class="container">
+            <h2>Your Mental Health Analysis</h2>
+            <p id="result-text">Loading your results...</p>
+            <a href="#therapist" class="btn">Connect with a Therapist</a>
+        </div>
+    </section>
+
+    <!-- Mood Tracking Section -->
+    <section id="mood" class="mood">
+        <div class="container">
+            <h2>Track Your Mood</h2>
+            <p>Log your mood daily and monitor your emotional well-being.</p>
+            <a href="#" class="btn">Start Mood Tracking</a>
+        </div>
+    </section>
+
+    <!-- Notification Section (Future Expansion) -->
+    <section id="notifications" class="notifications">
+        <div class="container">
+            <h2>Stay Calm with Gentle Reminders</h2>
+            <p>We’ll send you occasional tips and reminders to help you stay positive.</p>
+            <a href="#" class="btn">Enable Notifications</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OurSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function analyzeQuiz() {
+            const q1 = document.getElementById('q1').value;
+            const q2 = document.getElementById('q2').value;
+            const q3 = document.getElementById('q3').value;
+
+            let condition = "";
+
+            if (q1 === 'always' || q2 === 'poor' || q3 === 'no') {
+                condition = "It seems like you might be experiencing high levels of stress and isolation. Consider seeking professional guidance.";
+            } else if (q1 === 'often' || q2 === 'average') {
+                condition = "You may be facing moderate challenges. It's a good time to focus on self-care and talk to someone.";
+            } else {
+                condition = "You're doing well, but maintaining a support system and practicing mindfulness is always beneficial.";
+            }
+
+            document.getElementById('result-text').innerText = condition;
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

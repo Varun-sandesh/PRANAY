@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support</title>
+    <link rel="stylesheet" href="imp.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to OurSpace</h1>
+    <p>Your Partner in Mental Health and Wellness</p>
+</header>
+<nav>
+    <a href="#about" class="about">About Us</a>
+    <a href="#services" class="about">Services</a>
+    <a href="#contact" class="about">Contact</a>
+</nav>
+<section id="about">
+    <h2>About Us</h2>
+    <div class="aboutdiv">
+    <pre class="aboutus"> Welcome to "OURSPACE" – Your Companion for Mental Wellness 
+        
+                At "OURSPACE", we believe that mental health is just as important as physical health. 
+        Our mission:
+        To break the stigma around mental health and provide a safe, supportive,
+        and confidential space for everyone seeking help.
+       
+        
+        Our Vision: 
+        To create a society where mental health is prioritized, understood, and accessible to all.
+        Together, let's break the silence and build a happier, healthier tomorrow.</p>  
+        
+        <p>You are not alone – OurSpace is always with you.</pre>
+            </div>
+        <!-- <frameset rows="30%,70%">
+            <frame src="frame.html" target="display"></frame>
+        </frameset> -->
+</section>
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Online Counseling</h3>
+            <p>One-on-one virtual sessions with certified therapists.</p>
+        </div>
+        <div class="service-card">
+            <h3>Support Groups</h3>
+            <p>Join our peer support groups to connect with others.</p>
+        </div>
+        <div class="service-card">
+            <h3>Mental Health Resources</h3>
+            <p>Access articles, podcasts, and self-help guides.</p>
+        </div>
+    </div>
+</section>
+<!-- <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: Ourspace@gmail.com</p>
+    <p>Phone: 1234567890</p>
+</section> -->
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #4a69bd;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            background-color: #4a69bd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .btn:active{
+            transform: scale(0.5);
+            border: 0.5px solid white;
+        }
+        .btn:hover {
+            background-color: #6a89cc;
+            transform: translateY(-3px);
+        }
+        section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #dfe6e9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-in-out forwards;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to OurSpace</h1>
+            <p>Your Safe Space for Mental Health & Inner Peace</p>
+            <a href="#quiz" class="btn">Take the Quiz</a>
+        </div>
+    </header>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2>Mental Health Quiz</h2>
+            <form id="quiz-form">
+                <div class="form-group">
+                    <label for="q1">How often do you feel anxious or stressed?</label>
+                    <select id="q1" name="q1">
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="q2">How is your sleep pattern?</label>
+                    <select id="q2" name="q2">
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="q3">Do you feel socially connected?</label>
+                    <select id="q3" name="q3">
+                        <option value="yes">Yes</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="q4">Do you experience mood swings?</label>
+                    <select id="q4" name="q4">
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="q5">Do you feel motivated to accomplish daily tasks?</label>
+                    <select id="q5" name="q5">
+                        <option value="yes">Yes</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn" onclick="analyzeQuiz()">Get Results</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section id="results" class="results" style="display:none;">
+        <div class="container">
+            <h2>Your Mental Health Analysis</h2>
+            <p id="result-text">Loading your results...</p>
+            <a href="#therapist" class="btn">Connect with a Therapist</a>
+        </div>
+    </section>
+
+    <!-- Mood Tracking Section -->
+    <section id="mood" class="mood">
+        <div class="container">
+            <h2>Track Your Mood</h2>
+            <p>Log your mood daily and monitor your emotional well-being.</p>
+            <a href="#" class="btn">Start Mood Tracking</a>
+        </div>
+    </section>
+
+    <!-- Notification Section (Future Expansion) -->
+    <section id="notifications" class="notifications">
+        <div class="container">
+            <h2>Stay Calm with Gentle Reminders</h2>
+            <p>We’ll send you occasional tips and reminders to help you stay positive.</p>
+            <a href="#" class="btn">Enable Notifications</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OurSpace. All rights reserved.</p>
+        </div>
+    </footer> -->
+
+    <script>
+        function analyzeQuiz() {
+            const q1 = document.getElementById('q1').value;
+            const q2 = document.getElementById('q2').value;
+            const q3 = document.getElementById('q3').value;
+            const q4 = document.getElementById('q4').value;
+            const q5 = document.getElementById('q5').value;
+
+            let condition = "";
+            let score = 0;
+
+            const answers = [q1, q2, q3, q4, q5];
+            answers.forEach(ans => {
+                if (ans === 'always' || ans === 'poor' || ans === 'no') {
+                    score += 3;
+                } else if (ans === 'often' || ans === 'sometimes') {
+                    score += 2;
+                } else {
+                    score += 1;
+                }
+            });
+
+            if (score >= 12) {
+                condition = "You may be experiencing significant stress. Professional guidance is recommended.";
+            } else if (score >= 8) {
+                condition = "You may be facing moderate challenges. Consider practicing self-care and connecting with support.";
+            } else {
+                condition = "You seem to be managing well, but staying mindful and maintaining balance is key.";
+            }
+
+            document.getElementById('result-text').innerText = condition;
+            document.getElementById('results').style.display = 'block';
+        }
+    </script>
+
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: Ourspace@gmail.com</p>
+    <p>Phone: 1234567890</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 OurSpace. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

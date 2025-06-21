@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OurSpace - Your Safe Space</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            animation: fadeIn 1s ease-in-out;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #4a69bd;
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4a69bd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background-color: #6a89cc;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #dfe6e9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        #lottie-animation {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to OurSpace</h1>
+            <p>Your Safe Space for Mental Health & Inner Peace</p>
+            <div id="lottie-animation"></div>
+            <a href="#quiz" class="btn">Take the Quiz</a>
+        </div>
+    </header>
+
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2>Mental Health Quiz</h2>
+            <form id="quiz-form">
+                <div class="form-group">
+                    <label for="q1">How often do you feel anxious or stressed?</label>
+                    <select id="q1" name="q1">
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </div>
+                <button type="button" class="btn" onclick="analyzeQuiz()">Get Results</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="results" class="results" style="display:none;">
+        <div class="container">
+            <h2>Your Mental Health Analysis</h2>
+            <p id="result-text">Loading your results...</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OurSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function analyzeQuiz() {
+            const q1 = document.getElementById('q1').value;
+            let condition = q1 === 'always' ? "You may be experiencing significant stress." : "You seem to be managing well.";
+            document.getElementById('result-text').innerText = condition;
+            document.getElementById('results').style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let animation = lottie.loadAnimation({
+                container: document.getElementById("lottie-animation"),
+                renderer: "svg",
+                loop: true,
+                autoplay: true,
+                path: "https://assets10.lottiefiles.com/packages/lf20_h9kds1my.json"
+            });
+        });
+    </script>
+</body>
+</html>
