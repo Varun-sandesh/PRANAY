@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 dark:text-gray-200 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium leading-tight;
+  }
+
+  /* High contrast mode */
+  .high-contrast {
+    filter: contrast(150%) brightness(120%);
+  }
+
+  .high-contrast * {
+    border-color: #000 !important;
+  }
+
+  .high-contrast .btn-primary {
+    @apply bg-black text-white border-2 border-white;
+  }
+
+  .high-contrast .btn-secondary {
+    @apply bg-white text-black border-2 border-black;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+      bg-gradient-to-r from-indigo-600 to-purple-600 
+      text-white font-medium rounded-full 
+      transition-all duration-300 
+      hover:shadow-lg hover:shadow-indigo-500/25 
+      transform hover:-translate-y-1
+      focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+      bg-white dark:bg-gray-800 text-indigo-700 dark:text-indigo-300 font-medium rounded-full
+      border-2 border-indigo-200 dark:border-indigo-600
+      transition-all duration-300 
+      hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-md
+      transform hover:-translate-y-1
+      focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:ring-offset-2;
+  }
+  
+  .card-container {
+    @apply transform transition duration-300 hover:-translate-y-1;
+  }
+  
+  .quiz-card {
+    @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-indigo-100 dark:border-indigo-800;
+  }
+  
+  .option-btn {
+    @apply flex items-center justify-between w-full p-4 
+      text-left rounded-lg border border-gray-200 dark:border-gray-600
+      transition-colors duration-200 
+      hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:border-indigo-200 dark:hover:border-indigo-700
+      focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+  
+  .option-btn.selected {
+    @apply bg-indigo-50 dark:bg-indigo-900 border-indigo-500 text-indigo-700 dark:text-indigo-300 font-medium;
+  }
+  
+  .results-card {
+    @apply bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-indigo-100 dark:border-indigo-800;
+  }
+  
+  .mood-card {
+    @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-indigo-100 dark:border-indigo-800 h-full;
+  }
+  
+  .mood-btn {
+    @apply flex flex-col items-center justify-center p-2 
+      rounded-lg border border-gray-200 dark:border-gray-600
+      transition-all duration-200 
+      hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:border-indigo-200 dark:hover:border-indigo-700
+      focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+  
+  .mood-btn.selected {
+    @apply bg-indigo-50 dark:bg-indigo-900 border-indigo-500;
+  }
+  
+  .resource-card {
+    @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-indigo-50 dark:border-indigo-800
+      transition duration-300 hover:shadow-lg hover:border-indigo-100 dark:hover:border-indigo-700;
+  }
+  
+  .resource-link {
+    @apply inline-flex items-center text-indigo-700 dark:text-indigo-300 font-medium 
+      transition-colors duration-200 hover:text-indigo-900 dark:hover:text-indigo-100;
+  }
+  
+  .resource-phone {
+    @apply inline-flex items-center px-4 py-2
+      bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 font-medium rounded-full;
+  }
+  
+  .notification-card {
+    @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-indigo-100 dark:border-indigo-800;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600
+      focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+      dark:bg-gray-700 dark:text-white transition duration-200;
+  }
+  
+  .form-select {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600
+      focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+      bg-white dark:bg-gray-700 dark:text-white transition duration-200;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600
+      focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+      dark:bg-gray-700 dark:text-white transition duration-200;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+  }
+}
+
+/* Calendar styling */
+.react-calendar {
+  @apply w-full bg-white dark:bg-gray-800 border-none rounded-lg;
+}
+
+.react-calendar__tile {
+  @apply p-2 text-center hover:bg-indigo-50 dark:hover:bg-indigo-900 rounded;
+}
+
+.react-calendar__tile--active {
+  @apply bg-indigo-500 text-white;
+}
+
+.react-calendar__tile.has-activities {
+  @apply bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200;
+}
+
+/* Animation for particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(79, 70, 229, 0.15) 2px, transparent 0),
+    radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.15) 2px, transparent 0);
+  background-size: 48px 48px;
+  animation: particlesAnimation 20s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes particlesAnimation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 48px 48px, 48px 48px;
+  }
+}
+
+/* Wave animation */
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
